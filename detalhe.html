@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EcoHistory – Detalhe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/styles.css" />
+</head>
+<body>
+  
+<header class="header">
+  <div class="container nav">
+    <a class="logo" href="index.html">
+      <span class="logo-icon">H</span>
+      EcoHistory
+    </a>
+    <nav class="menu" id="menu">
+      <a href="index.html">Home</a>
+      <a href="acontecimentos.html">Acontecimentos</a>
+      <a href="contato.html">Contato</a>
+      <a href="sobre.html">Sobre</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Abrir menu" onclick="toggleMenu()">☰</button>
+  </div>
+</header>
+
+  <header class="header-hero">
+    <div class="inner container">
+      <h1 id="detalhe-titulo">Acontecimento</h1>
+      <p id="detalhe-sub">Período • Ano</p>
+    </div>
+  </header>
+
+  <main class="container section">
+    <article class="prose">
+      <img id="detalhe-imagem" src="static/img/quedadoimpérioromanodoocidente.webp" alt="Imagem do acontecimento" style="border-radius:12px; border:1px solid var(--border); box-shadow: var(--shadow)">
+      <p id="detalhe-texto" style="margin-top:1rem">
+        <!-- Texto carregado via script.js -->
+      </p>
+
+      <button class="btn" id="btnQuiz" style="margin:1.2rem auto; display:block;">Fazer Quiz</button>
+
+      <!-- Modal do Quiz -->
+      <div id="quizModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(20,24,32,0.85); z-index:999; align-items:center; justify-content:center;">
+        <div id="quizBox" style="background:#fff; border-radius:16px; max-width:380px; width:96vw; margin:auto; box-shadow:0 8px 32px rgba(0,0,0,.18); padding:2rem 1.2rem; position:relative;">
+          <button id="closeQuiz" style="position:absolute; top:12px; right:16px; background:transparent; border:none; font-size:1.5rem; color:#888; cursor:pointer;">&times;</button>
+          <div id="quizConteudo"></div>
+        </div>
+      </div>
+
+      <p style="margin-top:1.2rem">
+        <a class="btn" href="acontecimentos.html">Voltar para Acontecimentos</a>
+      </p>
+    </article>
+  </main>
+  
+<footer class="footer">
+  <div class="container">
+    <div class="cols">
+      <div class="col">
+        <h3>EcoHistory</h3>
+        <p>Explorando os principais acontecimentos da história mundial com contexto e curiosidades.</p>
+      </div>
+      <div class="col">
+        <h4>Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="acontecimentos.html">Acontecimentos</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Recursos</h4>
+        <ul>
+          <li><a href="#">Política de Privacidade</a></li>
+          <li><a href="#">Termos de Uso</a></li>
+          <li><a href="#">Acessibilidade</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Contato</h4>
+        <p style="color:#c0c7da">Email: ecohistory@gmail.com</p>
+        <p style="color:#c0c7da">Telefone: (61) 98627-9308</p>
+      </div>
+    </div>
+    <p class="copy">© <span id="year"></span> EcoHistory. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+  <script src="static/js/quizData.js"></script>
+  <script src="static/js/script.js"></script>
+</body>
+</html>

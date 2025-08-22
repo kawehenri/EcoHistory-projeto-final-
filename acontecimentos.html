@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EcoHistory – Acontecimentos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/styles.css" />
+</head>
+<body>
+  
+<header class="header">
+  <div class="container nav">
+    <a class="logo" href="index.html">
+      <span class="logo-icon">H</span>
+      EcoHistory
+    </a>
+    <nav class="menu" id="menu">
+      <a href="index.html">Home</a>
+      <a href="acontecimentos.html">Acontecimentos</a>
+      <a href="contato.html">Contato</a>
+      <a href="sobre.html">Sobre</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Abrir menu" onclick="toggleMenu()">☰</button>
+  </div>
+</header>
+
+  <main class="container section">
+    <h1>Acontecimentos Históricos</h1>
+    <p>Filtre por período ou pesquise pelo título para encontrar eventos.</p>
+
+    <div class="timeline" id="timeline"></div>
+
+    <div class="filterbar">
+      <input id="search" class="input" placeholder="Pesquisar por título..." />
+      <div style="display:flex; gap:.6rem; align-items:center">
+        <label for="periodo">Período:</label>
+        <select id="periodo">
+          <option value="todos">Todos</option>
+          <option value="Antiguidade">Antiguidade</option>
+          <option value="Idade Média">Idade Média</option>
+          <option value="Era Moderna">Era Moderna</option>
+          <option value="Século XX">Século XX</option>
+          <option value="Atualidade">Atualidade</option>
+        </select>
+      </div>
+    </div>
+
+    <section class="list" id="list">
+      <div class="evento">
+        <div class="evento">
+          <h2>Queda do Império Romano do Ocidente</h2>
+          <img src="static/img/quedadoimpérioromanodoocidente.webp" alt="Queda do Império Romano do Ocidente" style="width:200px;">
+          <p>O fim do Império Romano do Ocidente em 476 d.C. marcou o início da Idade Média.</p>
+        </div>
+        <div class="evento">
+          <h2>Revolução Francesa</h2>
+          <img src="static/img/revoluçãofrancesa.jfif" alt="Revolução Francesa" style="width:200px;">
+          <p>Movimento social e político que transformou a França e influenciou o mundo no final do século XVIII.</p>
+        </div>
+        <div class="evento">
+          <h2>Primeira Guerra Mundial</h2>
+          <img src="static/img/primeiraguerramundial.jpg" alt="Primeira Guerra Mundial" style="width:200px;">
+          <p>Conflito global ocorrido entre 1914 e 1918, envolvendo as principais potências mundiais.</p>
+        </div>
+        <div class="evento">
+          <h2>Segunda Guerra Mundial</h2>
+          <img src="static/img/segundaguerramundial.webp" alt="Segunda Guerra Mundial" style="width:200px;">
+          <p>Maior conflito armado da história, ocorrido entre 1939 e 1945.</p>
+        </div>
+        <div class="evento">
+          <h2>Revolução Industrial</h2>
+          <img src="static/img/revolucaoindustrial.webp" alt="Revolução Industrial" style="width:200px;">
+          <p>Período de grandes transformações tecnológicas, econômicas e sociais iniciado no século XVIII.</p>
+        </div>
+        <div class="evento">
+          <h2>Muro de Berlim</h2>
+          <img src="static/img/muroberlim.jpg" alt="Muro de Berlim" style="width:200px;">
+          <p>Símbolo da Guerra Fria, separou Berlim entre 1961 e 1989.</p>
+        </div>
+        <div class="evento">
+          <h2>Primavera Árabe</h2>
+          <img src="static/img/primaveraarabe.avif" alt="Primavera Árabe" style="width:200px;">
+          <p>Movimento de protestos e revoltas que ocorreram no mundo árabe a partir de 2010.</p>
+        </div>
+        <div class="evento">
+          <h2>Surgimento das Universidades</h2>
+          <img src="static/img/surgimentodasuniversidades.jpg" alt="Surgimento das Universidades" style="width:200px;">
+          <p>As primeiras universidades surgiram na Europa durante a Idade Média, promovendo o conhecimento.</p>
+        </div>
+    </section>
+  </main>
+  
+<footer class="footer">
+  <div class="container">
+    <div class="cols">
+      <div class="col">
+        <h3>EcoHistory</h3>
+        <p>Explorando os principais acontecimentos da história mundial com contexto e curiosidades.</p>
+      </div>
+      <div class="col">
+        <h4>Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="acontecimentos.html">Acontecimentos</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Recursos</h4>
+        <ul>
+          <li><a href="#">Política de Privacidade</a></li>
+          <li><a href="#">Termos de Uso</a></li>
+          <li><a href="#">Acessibilidade</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Contato</h4>
+       <p style="color:#c0c7da"> Email: ecohistory@gmail.com</p>
+        <p style="color:#c0c7da"> Telefone: (61) 98627-9308</p>
+      </div>
+      </div>
+    </div>
+    <p class="copy">© <span id="year"></span> EcoHistory. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+  <script src="static/js/script.js"></script>
+</body>
+</html>

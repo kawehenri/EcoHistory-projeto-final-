@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EcoHistory – Acontecimentos Históricos</title>
+  <meta name="description" content="Site educacional com linha do tempo e artigos sobre os grandes acontecimentos da história mundial." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/styles.css" />
+</head>
+<body>
+  
+<header class="header">
+  <div class="container nav">
+    <a class="logo" href="index.html">
+      <span class="logo-icon">EH</span>
+      EcoHistory
+    </a>
+    <nav class="menu" id="menu">
+  <a href="index.html">Home</a>
+  <a href="acontecimentos.html">Acontecimentos</a>
+  <a href="contato.html">Contato</a>
+  <a href="sobre.html">Sobre</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Abrir menu" onclick="toggleMenu()">☰</button>
+  </div>
+</header>
+
+  <main>
+    <section class="hero">
+      <div class="inner container">
+        <h1>Descubra a História do Mundo</h1>
+        <p>Uma jornada pela Antiguidade à Atualidade. Explore eventos que moldaram sociedades, tecnologias e culturas.</p>
+        <div class="cta">
+          <a class="btn" href="acontecimentos.html">Explorar História</a>
+          <a class="btn outline" href="#destaques">Ver Destaques</a>
+        </div>
+      </div>
+    </section>
+    <section class="section container" id="exclusivos">
+      <h2>Exclusivos</h2>
+      <div class="grid">
+        <article class="card">
+          <img src="static/img/dexter.jpg" alt="Dexter Morgan">
+          <div class="content">
+            <span class="badge" style="background:#c0392b">Cultura Pop</span>
+            <h3>O Impacto Cultural do Seriado Dexter</h3>
+            <p>Dexter revolucionou a TV ao explorar dilemas éticos, justiça e a dualidade humana, tornando-se referência cultural e psicológica.</p>
+            <div class="actions">
+              <a class="btn" href="detalhe.html?id=dexter">Ver detalhes e quiz</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container" id="destaques">
+      <h2>Destaques</h2>
+      <div class="grid">
+        <article class="card">
+          <img src="static/img/revoluçãofrancesa.jfif" alt="Revolução Francesa">
+          <div class="content">
+            <span class="badge">Era Moderna</span>
+            <h3>Revolução Francesa (1789)</h3>
+            <p>Um marco na transição para sociedades modernas, com ideais de liberdade, igualdade e fraternidade.</p>
+            <div class="actions">
+              <a class="btn" href="detalhe.html?id=revolucao-francesa">Saiba mais</a>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="static/img/segundaguerramundial.webp" alt="Segunda Guerra Mundial">
+          <div class="content">
+            <span class="badge">Século XX</span>
+            <h3>Segunda Guerra Mundial (1939–1945)</h3>
+            <p>Conflito global que redesenhou fronteiras e acelerou transformações sociais, políticas e tecnológicas.</p>
+            <div class="actions">
+              <a class="btn" href="detalhe.html?id=segunda-guerra">Saiba mais</a>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="static/img/muroberlim.jpg" alt="Queda do Muro de Berlim">
+          <div class="content">
+            <span class="badge">Contemporânea</span>
+            <h3>Queda do Muro de Berlim (1989)</h3>
+            <p>O símbolo do fim da Guerra Fria, reaproximando o Oriente e o Ocidente na Europa.</p>
+            <div class="actions">
+              <a class="btn" href="detalhe.html?id=muro-de-berlim">Saiba mais</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+  
+<footer class="footer">
+  <div class="container">
+    <div class="cols">
+      <div class="col">
+        <h3>EcoHistory</h3>
+        <p>Explorando os principais acontecimentos da história mundial com contexto e curiosidades.</p>
+      </div>
+      <div class="col">
+        <h4>Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="acontecimentos.html">Acontecimentos</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Recursos</h4>
+        <ul>
+          <li><a href="#">Política de Privacidade</a></li>
+          <li><a href="#">Termos de Uso</a></li>
+          <li><a href="#">Acessibilidade</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Contato</h4>
+        <p>
+        </p>
+        <p style="color:#c0c7da"> Email: ecohistory@gmail.com</p>
+        <p style="color:#c0c7da"> Telefone: (61) 98627-9308</p>
+      </div>
+    </div>
+    <p class="copy">© <span id="year"></span> EcoHistory. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+  <script src="static/js/script.js"></script>
+</body>
+</html>
