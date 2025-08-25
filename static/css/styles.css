@@ -1,3 +1,8 @@
+@keyframes sucessoPulse {
+  0% { transform: scale(0.7); opacity: 0.2; }
+  60% { transform: scale(1.15); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
 #quizBox .quiz-option.correct {
   background: #2ecc40 !important;
   color: #fff !important;

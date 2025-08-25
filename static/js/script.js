@@ -202,7 +202,14 @@ function enviarContato(e){
     alert('Preencha todos os campos.');
     return false;
   }
-  alert('Mensagem enviada! (simulação)');
+  // Exibe imagem de sucesso
+  const sucessoImg = document.getElementById('sucesso-img');
+  if(sucessoImg) {
+    sucessoImg.style.display = 'block';
+    setTimeout(()=>{
+      sucessoImg.style.display = 'none';
+    }, 2200);
+  }
   form.reset();
   return false;
 }
