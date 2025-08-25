@@ -208,9 +208,9 @@ img{max-width:100%;display:block}
 .logo{display:flex; align-items:center; gap:.6rem; font-weight:800; color:white}
 .logo-icon{
   width:36px; height:36px; display:grid; place-items:center; border-radius:9px;
-  background: radial-gradient(circle at 30% 30%, var(--accent), #8b6a18);
+  background: transparent;
   color:black; font-weight:900;
-  box-shadow: 0 6px 16px rgba(197,157,47,.35);
+  box-shadow: none;
 }
 
 .menu{display:flex; align-items:center; gap:1rem; font-family:"Montserrat", sans-serif}
