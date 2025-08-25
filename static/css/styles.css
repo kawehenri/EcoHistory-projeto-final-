@@ -39,6 +39,10 @@
   color: #fff;
 }
 #quizBox .quiz-option {
+  /*
+    Estilos para opções do quiz corretas e erradas
+    Inclui animações de acerto e erro
+  */
   background: #181b22;
   color: var(--text);
   border: 2px solid transparent;
@@ -51,11 +55,13 @@
 /* Quiz Modal */
 #quizModal {
   display: none;
+  /* Animação para resposta correta */
   position: fixed;
   top: 0; left: 0;
   width: 100vw; height: 100vh;
   background: rgba(20,24,32,0.85);
   z-index: 999;
+  /* Animação para resposta errada */
   align-items: center;
   justify-content: center;
 }
@@ -64,6 +70,7 @@
   border-radius: 16px;
   max-width: 380px;
   width: 96vw;
+  /* Container principal do quiz */
   margin: auto;
   box-shadow: 0 8px 32px rgba(0,0,0,.18);
   padding: 2rem 1.2rem;
@@ -89,6 +96,7 @@
   flex-direction: column;
   gap: .7rem;
   width: 100%;
+  /* Modal do quiz */
   margin-bottom: 1.2rem;
 }
 #quizBox .quiz-option {
@@ -99,6 +107,7 @@
   font-size: 1rem;
   cursor: pointer;
   transition: background .2s, border-color .2s, box-shadow .2s;
+  /* Estilos detalhados do box do quiz */
   color: #222;
   font-family: inherit;
   box-shadow: 0 2px 8px rgba(31,59,115,.04);
@@ -184,6 +193,10 @@ img{max-width:100%;display:block}
   display:inline-flex; align-items:center; gap:.6rem;
   background:linear-gradient(135deg, var(--primary), var(--primary-600));
   color:white; padding:.8rem 1.1rem; border-radius:999px; border:1px solid #2a3a63;
+  /*
+    Variáveis globais de cor, espaçamento e sombra
+    Usadas para manter o design consistente
+  */
   box-shadow: var(--shadow);
   font-family:"Montserrat", sans-serif; font-weight:600;
   transition: transform .15s ease, box-shadow .2s ease;
@@ -197,6 +210,7 @@ img{max-width:100%;display:block}
 
 /* Header */
 .header{
+  /* Reset e estilos globais */
   position:sticky; top:0; z-index:40;
   backdrop-filter: blur(8px);
   background: rgba(12,14,20,.55);
@@ -216,7 +230,9 @@ img{max-width:100%;display:block}
 .menu{display:flex; align-items:center; gap:1rem; font-family:"Montserrat", sans-serif}
 .menu a{
   padding:.55rem .8rem; border-radius:999px; color:#c9d3ea;
+  /* Container central para limitar largura */
   border:1px solid transparent;
+  /* Botões principais */
 }
 .menu a.active, .menu a:hover{ border-color:var(--border); color:white; background:#151925 }
 
@@ -229,7 +245,9 @@ img{max-width:100%;display:block}
   min-height: 64vh; display:grid; place-items:center;
   border-bottom:1px solid var(--border);
 }
+  /* Selo de categoria dos cards */
 .hero::before{
+  /* Header (cabeçalho fixo) */
   content:""; position:absolute; inset:0;
   background: linear-gradient(180deg, rgba(10,12,19,.75), rgba(10,12,19,.9));
   z-index:0;
@@ -246,6 +264,7 @@ img{max-width:100%;display:block}
 .grid{
   display:grid; gap:1rem; margin-top:1.2rem;
   grid-template-columns: repeat(12, 1fr);
+  /* Menu de navegação */
 }
 .card{
   grid-column: span 4;
@@ -254,6 +273,7 @@ img{max-width:100%;display:block}
   border-radius: var(--radius);
   overflow:hidden;
   box-shadow: var(--shadow);
+  /* Hero (destaque inicial) */
   display:flex; flex-direction:column;
 }
 .card img{ aspect-ratio: 16/9; object-fit: cover }
@@ -269,8 +289,10 @@ img{max-width:100%;display:block}
 }
 .timeline button.active{ background:#16203a; color:white; border:1px solid #263253 }
 
+  /* Seções principais */
 /* Filter + search */
 .filterbar{
+  /* Grid de cards */
   display:flex; gap:.6rem; flex-wrap:wrap; align-items:center; justify-content:space-between;
   padding: .8rem; border:1px solid var(--border); border-radius:12px; background:#0f1320;
   margin: .6rem 0 1rem;
@@ -288,12 +310,14 @@ img{max-width:100%;display:block}
 @media (max-width: 640px){
   .menu{ display:none }
   .menu-toggle{ display:inline-flex }
+  /* Chips da timeline */
   .grid .card, .list .card{ grid-column: span 12 }
 }
 
 /* Detail page */
 .header-hero{
   background: url('./assets/detalhe.jpg') center/cover no-repeat;
+  /* Barra de filtros e busca */
   min-height: 40vh; display:grid; place-items:center; position:relative; isolation:isolate;
 }
 .header-hero::before{ content:""; position:absolute; inset:0; background: linear-gradient(180deg, rgba(10,12,19,.7), rgba(10,12,19,.9)) }
@@ -303,6 +327,7 @@ img{max-width:100%;display:block}
 .prose p{ color:#d0d6e5 }
 
 .gallery{ display:grid; grid-template-columns: repeat(12,1fr); gap: .8rem; margin-top:1rem }
+  /* Listagem de cards */
 .gallery img{ border-radius:12px; border:1px solid var(--border); box-shadow: var(--shadow) }
 .gallery .wide{ grid-column: span 12 }
 .gallery .half{ grid-column: span 6 }
@@ -313,6 +338,7 @@ img{max-width:100%;display:block}
 /* About */
 .team{ display:grid; grid-template-columns: repeat(12, 1fr); gap:1rem; margin-top:1rem }
 .member{ grid-column: span 3; background:#10131b; border:1px solid var(--border); border-radius:16px; padding:1rem; text-align:center }
+  /* Página de detalhes */
 .member img{ width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:12px; border:1px solid var(--border) }
 .member h4{ margin:.6rem 0 0 }
 .member p.role{ color:#c0c7da; margin:.2rem 0 .6rem; font-family:"Montserrat", sans-serif }
@@ -322,6 +348,7 @@ img{max-width:100%;display:block}
 
 /* Contact */
 .form{ display:grid; grid-template-columns: repeat(12, 1fr); gap:.8rem; margin-top:1rem }
+  /* Galeria de imagens */
 .form .field{ grid-column: span 6; display:flex; flex-direction:column; gap:.35rem }
 .form .field.full{ grid-column: span 12 }
 label{ font-family:"Montserrat", sans-serif; color:#cbd5f0; font-size:.95rem }
@@ -329,6 +356,7 @@ input, textarea, select{ background:#101522; border:1px solid var(--border); col
 textarea{ min-height: 140px; resize: vertical }
 
 /* Footer */
+  /* Equipe */
 .footer{ margin-top: 3rem; background:#0b0d14; border-top:1px solid var(--border); padding: 2rem 0 }
 .footer .cols{ display:grid; grid-template-columns: repeat(12, 1fr); gap:1rem }
 .footer .col{ grid-column: span 3 }
@@ -337,8 +365,11 @@ textarea{ min-height: 140px; resize: vertical }
 .copy{ margin-top:1rem; border-top:1px solid var(--border); padding-top:1rem; color:#9aa4bd }
 
 @media (max-width: 920px){
+  /* Contato */
   .footer .col{ grid-column: span 6 }
 }
 @media (max-width: 520px){
   .footer .col{ grid-column: span 12 }
 }
+
+  /* Rodapé */

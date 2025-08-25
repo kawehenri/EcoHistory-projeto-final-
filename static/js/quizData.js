@@ -1,65 +1,82 @@
-// Quizzes específicos para cada acontecimento histórico
-// Use o mesmo id do acontecimento em DATA (ex: "revolucao-francesa")
+/*
+  Arquivo: quizData.js
+  Descrição: Contém os quizzes de cada acontecimento histórico do EcoHistory.
+  Estrutura: Cada chave do objeto 'quizzes' corresponde ao id do acontecimento em DATA.
+  Cada quiz é um array de perguntas, cada uma com opções e índice da resposta correta.
+*/
 const quizzes = { 
+  // Quiz sobre o seriado Dexter
   "dexter": [
     {
+      // Pergunta 1: profissão do personagem principal
       pergunta: "Qual é a profissão de Dexter Morgan?",
       opcoes: ["Detetive", "Analista forense", "Advogado", "Médico"],
       resposta: 1
     },
     {
+      // Pergunta 2: código moral que orienta Dexter
       pergunta: "Qual é o nome do código que orienta Dexter em seus crimes?",
       opcoes: ["Código de Harry", "Código de Morgan", "Código de Debra", "Código de Miami"],
       resposta: 0
     },
     {
+      // Pergunta 3: relação familiar
       pergunta: "Quem é a irmã de Dexter?",
       opcoes: ["Rita", "Debra", "Lila", "Hannah"],
       resposta: 1
     },
     {
+      // Pergunta 4: dilema moral explorado na série
       pergunta: "Qual dilema moral é frequentemente explorado na série?",
       opcoes: ["Justiça versus vingança", "Amor versus ódio", "Poder versus submissão", "Riqueza versus pobreza"],
       resposta: 0
     },
     {
+      // Pergunta 5: policial que desconfia de Dexter
       pergunta: "Qual é o nome do policial que desconfia de Dexter desde o início?",
       opcoes: ["Doakes", "Masuka", "Quinn", "Batista"],
       resposta: 0
     }
   ],
+  // Quiz sobre a Queda do Império Romano do Ocidente
   "queda-imperio-romano": [
     {
+      // Pergunta 1: data do evento
       pergunta: "Em que ano ocorreu a Queda do Império Romano do Ocidente?",
       opcoes: ["395", "476", "1453", "800"],
       resposta: 1,
       dificuldade: "fácil"
     },
     {
+      // Pergunta 2: personagem histórico responsável pela deposição
       pergunta: "Quem depôs o último imperador romano do Ocidente?",
       opcoes: ["Odoacro", "Constantino", "Carlos Magno", "Teodósio"],
       resposta: 0,
       dificuldade: "médio"
     },
     {
+      // Pergunta 3: nome do último imperador
       pergunta: "Qual era o nome do último imperador romano do Ocidente?",
       opcoes: ["Júlio César", "Rômulo Augústulo", "Nero", "Trajano"],
       resposta: 1,
       dificuldade: "médio"
     },
     {
+      // Pergunta 4: povo decisivo para a queda
       pergunta: "Qual povo foi decisivo para a queda do Império Romano do Ocidente?",
       opcoes: ["Francos", "Godos", "Vândalos", "Germânicos"],
       resposta: 3,
       dificuldade: "difícil"
     },
     {
+      // Pergunta 5: consequência histórica
       pergunta: "A queda do Império Romano do Ocidente marcou o início de qual período?",
       opcoes: ["Idade Moderna", "Idade Média", "Renascimento", "Antiguidade"],
       resposta: 1,
       dificuldade: "fácil"
-    }
+    },
   ],
+  // Quiz sobre a Idade Média
   "idades-medias": [
     {
       pergunta: "Qual cidade europeia é considerada berço das universidades medievais?",
@@ -92,6 +109,7 @@ const quizzes = {
       dificuldade: "fácil"
     }
   ],
+  // Quiz sobre a Revolução Francesa
   "revolucao-francesa": [
     {
       pergunta: "Em que ano começou a Revolução Francesa?",
@@ -124,6 +142,7 @@ const quizzes = {
       dificuldade: "fácil"
     }
   ],
+  // Quiz sobre a Revolução Industrial
   "revolucao-industrial": [
     {
       pergunta: "Qual foi a principal invenção da Revolução Industrial?",
@@ -156,6 +175,7 @@ const quizzes = {
       dificuldade: "fácil"
     }
   ],
+  // Quiz sobre a Primeira Guerra Mundial
   "primeira-guerra": [
     {
       pergunta: "Em que ano começou a Primeira Guerra Mundial?",
@@ -188,6 +208,7 @@ const quizzes = {
       dificuldade: "difícil"
     }
   ],
+  // Quiz sobre a Segunda Guerra Mundial
   "segunda-guerra": [
     {
       pergunta: "Qual país foi invadido pela Alemanha em 1939?",
@@ -220,6 +241,7 @@ const quizzes = {
       dificuldade: "fácil"
     }
   ],
+  // Quiz sobre o Muro de Berlim
   "muro-de-berlim": [
     {
       pergunta: "Em que ano o Muro de Berlim caiu?",
@@ -252,6 +274,7 @@ const quizzes = {
       dificuldade: "fácil"
     }
   ],
+  // Quiz sobre a popularização da Internet
   "internet-popularizacao": [
     {
       pergunta: "Em que década a internet se popularizou mundialmente?",
@@ -284,6 +307,7 @@ const quizzes = {
       dificuldade: "fácil"
     }
   ],
+  // Quiz sobre a Primavera Árabe
   "primavera-arabe": [
     {
       pergunta: "Em que ano começou a Primavera Árabe?",

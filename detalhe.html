@@ -1,6 +1,12 @@
+<!--
+  Arquivo: detalhe.html
+  Descrição: Página de detalhes de um acontecimento histórico, exibe informações, imagem, quiz e navegação.
+  Estrutura: Cabeçalho, destaque do evento, conteúdo principal, quiz, rodapé.
+-->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+  <!-- Metadados e links de fontes e estilos -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>EcoHistory – Detalhe</title>
@@ -13,10 +19,11 @@
   
 <header class="header">
   <div class="container nav">
+     <!-- Logo e navegação principal -->
      <a class="logo" href="index.html">
-  <img src="static/img/history.png" alt="Logo EcoHistory" class="logo-icon" style="height:32px;vertical-align:middle;">
-  EcoHistory
-</a>
+      <img src="static/img/history.png" alt="Logo EcoHistory" class="logo-icon" style="height:32px;vertical-align:middle;">
+      EcoHistory
+    </a>
     <nav class="menu" id="menu">
       <a href="index.html">Home</a>
       <a href="acontecimentos.html">Acontecimentos</a>
@@ -27,6 +34,7 @@
   </div>
 </header>
 
+  <!-- Destaque do acontecimento (título e período) -->
   <header class="header-hero">
     <div class="inner container">
       <h1 id="detalhe-titulo">Acontecimento</h1>
@@ -36,11 +44,13 @@
 
   <main class="container section">
     <article class="prose">
+      <!-- Imagem do acontecimento -->
       <img id="detalhe-imagem" src="static/img/quedadoimpérioromanodoocidente.webp" alt="Imagem do acontecimento" style="border-radius:12px; border:1px solid var(--border); box-shadow: var(--shadow)">
       <p id="detalhe-texto" style="margin-top:1rem">
         <!-- Texto carregado via script.js -->
       </p>
 
+      <!-- Botão para abrir o quiz do acontecimento -->
       <button class="btn" id="btnQuiz" style="margin:1.2rem auto; display:block;">Fazer Quiz</button>
 
       <!-- Modal do Quiz -->
@@ -51,6 +61,7 @@
         </div>
       </div>
 
+      <!-- Link para voltar à lista de acontecimentos -->
       <p style="margin-top:1.2rem">
         <a class="btn" href="acontecimentos.html">Voltar para Acontecimentos</a>
       </p>
@@ -60,10 +71,12 @@
 <footer class="footer">
   <div class="container">
     <div class="cols">
+      <!-- Coluna institucional -->
       <div class="col">
         <h3>EcoHistory</h3>
         <p>Explorando os principais acontecimentos da história mundial com contexto e curiosidades.</p>
       </div>
+      <!-- Coluna de navegação -->
       <div class="col">
         <h4>Links</h4>
         <ul>
@@ -73,6 +86,7 @@
           <li><a href="contato.html">Contato</a></li>
         </ul>
       </div>
+      <!-- Coluna de recursos -->
       <div class="col">
         <h4>Recursos</h4>
         <ul>
@@ -81,8 +95,8 @@
           <li><a href="#">Acessibilidade</a></li>
         </ul>
       </div>
+      <!-- Coluna de contato -->
       <div class="col">
-        <h4>Contato</h4>
         <p style="color:#c0c7da">Email: ecohistory@gmail.com</p>
         <p style="color:#c0c7da">Telefone: (61) 98627-9308</p>
       </div>
@@ -91,6 +105,7 @@
   </div>
 </footer>
 
+  <!-- Scripts para lógica do quiz e detalhes -->
   <script src="static/js/quizData.js"></script>
   <script src="static/js/script.js"></script>
 </body>

@@ -1,6 +1,12 @@
+<!--
+  Arquivo: acontecimentos.html
+  Descrição: Página que exibe os principais acontecimentos históricos do EcoHistory.
+  Estrutura: Cabeçalho, filtros, lista de eventos, rodapé.
+-->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+  <!-- Metadados e links de fontes e estilos -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>EcoHistory – Acontecimentos</title>
@@ -13,10 +19,11 @@
   
 <header class="header">
   <div class="container nav">
+    <!-- Logo e navegação principal -->
     <a class="logo" href="index.html">
-  <img src="static/img/history.png" alt="Logo EcoHistory" class="logo-icon" style="height:32px;vertical-align:middle;">
-  EcoHistory
-</a>
+      <img src="static/img/history.png" alt="Logo EcoHistory" class="logo-icon" style="height:32px;vertical-align:middle;">
+      EcoHistory
+    </a>
     <nav class="menu" id="menu">
       <a href="index.html">Home</a>
       <a href="acontecimentos.html">Acontecimentos</a>
@@ -28,11 +35,14 @@
 </header>
 
   <main class="container section">
+    <!-- Título e instruções de uso -->
     <h1>Acontecimentos Históricos</h1>
     <p>Filtre por período ou pesquise pelo título para encontrar eventos.</p>
 
+    <!-- Timeline de períodos históricos -->
     <div class="timeline" id="timeline"></div>
 
+    <!-- Barra de filtros: busca e seleção de período -->
     <div class="filterbar">
       <input id="search" class="input" placeholder="Pesquisar por título..." />
       <div style="display:flex; gap:.6rem; align-items:center">
@@ -48,7 +58,9 @@
       </div>
     </div>
 
+    <!-- Lista de eventos históricos -->
     <section class="list" id="list">
+      <!-- Cada bloco .evento representa um acontecimento -->
       <div class="evento">
         <div class="evento">
           <h2>Queda do Império Romano do Ocidente</h2>
@@ -96,10 +108,12 @@
 <footer class="footer">
   <div class="container">
     <div class="cols">
+      <!-- Coluna institucional -->
       <div class="col">
         <h3>EcoHistory</h3>
         <p>Explorando os principais acontecimentos da história mundial com contexto e curiosidades.</p>
       </div>
+      <!-- Coluna de navegação -->
       <div class="col">
         <h4>Links</h4>
         <ul>
@@ -109,6 +123,7 @@
           <li><a href="contato.html">Contato</a></li>
         </ul>
       </div>
+      <!-- Coluna de recursos -->
       <div class="col">
         <h4>Recursos</h4>
         <ul>
@@ -117,8 +132,8 @@
           <li><a href="#">Acessibilidade</a></li>
         </ul>
       </div>
+      <!-- Coluna de contato -->
       <div class="col">
-        <h4>Contato</h4>
        <p style="color:#c0c7da"> Email: ecohistory@gmail.com</p>
         <p style="color:#c0c7da"> Telefone: (61) 98627-9308</p>
       </div>

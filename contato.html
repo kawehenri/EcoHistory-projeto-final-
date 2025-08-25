@@ -1,6 +1,12 @@
+<!--
+  Arquivo: contato.html
+  Descrição: Página de contato do EcoHistory, permite envio de mensagens e exibe informações de contato.
+  Estrutura: Cabeçalho, formulário, informações, rodapé.
+-->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+  <!-- Metadados e links de fontes e estilos -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>EcoHistory – Contato</title>
@@ -13,10 +19,11 @@
   
 <header class="header">
   <div class="container nav">
+     <!-- Logo e navegação principal -->
      <a class="logo" href="index.html">
-  <img src="static/img/history.png" alt="Logo EcoHistory" class="logo-icon" style="height:32px;vertical-align:middle;">
-  EcoHistory
-</a>
+      <img src="static/img/history.png" alt="Logo EcoHistory" class="logo-icon" style="height:32px;vertical-align:middle;">
+      EcoHistory
+    </a>
     <nav class="menu" id="menu">
       <a href="index.html">Home</a>
       <a href="acontecimentos.html">Acontecimentos</a>
@@ -28,9 +35,11 @@
 </header>
 
   <main class="container section">
+    <!-- Título e instruções de uso -->
     <h1>Contato</h1>
     <p>Use o formulário abaixo para enviar uma mensagem.</p>
 
+    <!-- Formulário de contato -->
     <form class="form" id="form-contato" onsubmit="return enviarContato(event)">
       <div class="field">
         <label for="nome">Nome</label>
@@ -53,6 +62,7 @@
       </div>
     </form>
 
+    <!-- Informações de contato adicionais -->
     <section class="section">
       <h2>Informações</h2>
       <p>Email: kawehenri@gmail.com</p>
@@ -65,10 +75,12 @@
 <footer class="footer">
   <div class="container">
     <div class="cols">
+      <!-- Coluna institucional -->
       <div class="col">
         <h3>EcoHistory</h3>
         <p>Explorando os principais acontecimentos da história mundial com contexto e curiosidades.</p>
       </div>
+      <!-- Coluna de navegação -->
       <div class="col">
         <h4>Links</h4>
         <ul>
@@ -78,6 +90,7 @@
           <li><a href="contato.html">Contato</a></li>
         </ul>
       </div>
+      <!-- Coluna de recursos -->
       <div class="col">
         <h4>Recursos</h4>
         <ul>
@@ -86,8 +99,8 @@
           <li><a href="#">Acessibilidade</a></li>
         </ul>
       </div>
+      <!-- Coluna de contato -->
       <div class="col">
-        <h4>Contato</h4>
         <p>
         </p>
         <p style="color:#c0c7da">Email: ecohistory@gmail.com</p>

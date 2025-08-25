@@ -1,19 +1,27 @@
+/*
+  Arquivo: script.js
+  Descrição: Controla a lógica principal do site EcoHistory, incluindo renderização de eventos, navegação, detalhes e quizzes.
+*/
+
+// --- Dados dos acontecimentos históricos ---
 const DATA = [
   {
+    // Evento: Queda do Império Romano do Ocidente
     id: "queda-imperio-romano",
     titulo: "Queda do Império Romano do Ocidente",
     ano: "476",
     periodo: "Antiguidade",
-  imagem: "static/img/quedadoimpérioromanodoocidente.webp",
+    imagem: "static/img/quedadoimpérioromanodoocidente.webp",
     resumo: "Transição para a Idade Média após instabilidade política e invasões.",
     texto: "Em 476, Odoacro depôs Rômulo Augústulo, encerrando a autoridade imperial no Ocidente. As causas incluíram crises econômicas, disputas internas e pressões de povos germânicos. O processo foi gradual e marcou reconfigurações no poder europeu."
   },
   {
+    // Evento: Surgimento das Universidades
     id: "idades-medias",
     titulo: "Surgimento das Universidades",
     ano: "séculos XII–XIII",
     periodo: "Idade Média",
-  imagem: "static/img/surgimentodasuniversidades.jpg",
+    imagem: "static/img/surgimentodasuniversidades.jpg",
     resumo: "Centros de saber em cidades como Bolonha, Paris e Oxford.",
     texto: "As universidades medievais consolidaram o trivium e quadrivium, ampliando o estudo do direito, medicina e teologia. Tornaram-se pilares na transmissão do conhecimento e na formação de corporações intelectuais."
   },
@@ -82,10 +90,11 @@ const DATA = [
   }
 ];
 
-// --- Utilities ---
+// --- Utilitários para seleção de elementos ---
 function qs(sel, el=document){ return el.querySelector(sel); }
 function qsa(sel, el=document){ return [...el.querySelectorAll(sel)]; }
 
+// --- Função para alternar menu responsivo ---
 function toggleMenu(){
   const m = qs('#menu');
   if(getComputedStyle(m).display === 'none'){
@@ -95,6 +104,7 @@ function toggleMenu(){
   }
 }
 
+// --- Destacar navegação ativa e atualizar ano no rodapé ---
 function setActiveNav(){
   const path = location.pathname.split('/').pop();
   qsa('.menu a').forEach(a=>{
@@ -107,7 +117,7 @@ function setActiveNav(){
   const yearEl = qs('#year'); if(yearEl) yearEl.textContent = year;
 }
 
-// --- Page: Acontecimentos ---
+// --- Página: Acontecimentos ---
 function initAcontecimentos(){
   const timeline = qs('#timeline');
   const list = qs('#list');
@@ -116,6 +126,7 @@ function initAcontecimentos(){
 
   if(!timeline || !list) return;
 
+  // Lista de períodos históricos
   const periodos = ["Antiguidade","Idade Média","Era Moderna","Século XX","Atualidade"];
   periodos.forEach((p,i)=>{
     const b = document.createElement('button');
@@ -130,6 +141,7 @@ function initAcontecimentos(){
     timeline.appendChild(b);
   });
 
+  // Cria card de evento
   function card(ev){
     const el = document.createElement('article');
     el.className = 'card';
@@ -147,6 +159,7 @@ function initAcontecimentos(){
     return el;
   }
 
+  // Renderiza lista de cards filtrados
   function render(){
     const q = (search?.value || '').toLowerCase().trim();
     const per = periodo?.value || 'todos';
@@ -163,7 +176,7 @@ function initAcontecimentos(){
   render();
 }
 
-// --- Page: Detalhe ---
+// --- Página: Detalhe ---
 function initDetalhe(){
   const params = new URLSearchParams(location.search);
   const id = params.get('id');
@@ -179,12 +192,12 @@ function initDetalhe(){
   if(txt) txt.textContent = evento.texto;
 }
 
-// --- Page: Contato ---
+// --- Página: Contato ---
 function enviarContato(e){
   e.preventDefault();
   const form = e.target;
   const data = Object.fromEntries(new FormData(form).entries());
-  // Validação simples
+  // Validação simples dos campos do formulário
   if(!data.nome || !data.email || !data.assunto || !data.mensagem){
     alert('Preencha todos os campos.');
     return false;
@@ -194,11 +207,12 @@ function enviarContato(e){
   return false;
 }
 
-// Init
+// --- Inicialização global ---
 document.addEventListener('DOMContentLoaded', () => {
-  setActiveNav();
-  initAcontecimentos();
-  initDetalhe();
+  setActiveNav(); // Destaca navegação e atualiza ano
+  initAcontecimentos(); // Renderiza cards de acontecimentos
+  initDetalhe(); // Preenche detalhes do evento
+
   // --- Quiz Dinâmico por Acontecimento ---
   // quizzes agora vêm de quizData.js
 
@@ -219,6 +233,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let selecionada = null;
     renderPergunta();
 
+    // Renderiza pergunta atual do quiz
     function renderPergunta() {
       const p = perguntas[indice];
       quizConteudo.innerHTML = `
@@ -235,6 +250,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       document.getElementById('btnResponder').onclick = responderPergunta;
     }
+    // Seleciona opção do quiz
     function selecionarOpcao(i) {
       selecionada = i;
       perguntas[indice].opcoes.forEach((_, idx) => {
@@ -242,6 +258,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       document.getElementById('btnResponder').disabled = false;
     }
+    // Responde pergunta e mostra feedback visual
     function responderPergunta() {
       const correta = perguntas[indice].resposta;
       const botoes = perguntas[indice].opcoes.map((_, idx) => document.getElementById('op'+idx));
@@ -262,6 +279,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }, 900);
     }
+    // Mostra resultado final do quiz
     function mostrarResultado() {
       let feedback = '';
       if(acertos === perguntas.length) feedback = 'Você dominou este tema! Parabéns!';
@@ -284,7 +302,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const params = new URLSearchParams(window.location.search);
   let acontecimentoId = params.get('id');
   const btnQuiz = document.getElementById('btnQuiz');
-  // Dados dos acontecimentos
+  // Dados dos acontecimentos para página de detalhes
   const detalhes = {
     "queda-imperio-romano": {
       titulo: "Queda do Império Romano do Ocidente",
@@ -341,7 +359,7 @@ document.addEventListener('DOMContentLoaded', () => {
       texto: "O seriado <strong>Dexter</strong> marcou a televisão mundial ao apresentar um protagonista complexo, que atua como analista forense e serial killer. A série explora temas como justiça, moralidade, dilemas éticos e a construção de um anti-herói, provocando discussões sobre os limites da justiça, o papel do Estado e a dualidade humana. Dexter influenciou outras produções e se tornou referência cultural, sendo lembrado por seu impacto psicológico e social."
     }
   };
-  // Preencher detalhes
+  // Preencher detalhes na página de evento
   if(acontecimentoId && detalhes[acontecimentoId]) {
     document.getElementById('detalhe-titulo').textContent = detalhes[acontecimentoId].titulo;
     document.getElementById('detalhe-sub').textContent = detalhes[acontecimentoId].sub;
@@ -354,7 +372,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if(!acontecimentoId) acontecimentoId = btnQuiz.getAttribute('data-id');
     btnQuiz.onclick = () => abrirQuizModal(acontecimentoId);
   }
-  // Fechar modal
+  // Fechar modal do quiz
   const quizModal = document.getElementById('quizModal');
   const closeQuiz = document.getElementById('closeQuiz');
   if(closeQuiz) closeQuiz.onclick = () => quizModal.style.display = 'none';
