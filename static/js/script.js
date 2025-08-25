@@ -337,7 +337,7 @@ document.addEventListener('DOMContentLoaded', () => {
     "dexter": {
       titulo: "O Impacto Cultural do Seriado Dexter",
       sub: "Televisão • Século XXI",
-      imagem: "static/img/dexter1.jfif",
+      imagem: "static/img/dexter-michael.png",
       texto: "O seriado <strong>Dexter</strong> marcou a televisão mundial ao apresentar um protagonista complexo, que atua como analista forense e serial killer. A série explora temas como justiça, moralidade, dilemas éticos e a construção de um anti-herói, provocando discussões sobre os limites da justiça, o papel do Estado e a dualidade humana. Dexter influenciou outras produções e se tornou referência cultural, sendo lembrado por seu impacto psicológico e social."
     }
   };
