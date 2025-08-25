@@ -12,8 +12,8 @@ const DATA = [
     ano: "476",
     periodo: "Antiguidade",
     imagem: "static/img/quedadoimpérioromanodoocidente.webp",
-    resumo: "Transição para a Idade Média após instabilidade política e invasões.",
-    texto: "Em 476, Odoacro depôs Rômulo Augústulo, encerrando a autoridade imperial no Ocidente. As causas incluíram crises econômicas, disputas internas e pressões de povos germânicos. O processo foi gradual e marcou reconfigurações no poder europeu."
+    resumo: "Fim do Império Romano do Ocidente, marcado por disputas internas, invasões bárbaras e crises econômicas.",
+    texto: "Oficialmente concluída em 476 d.C., com a abdicação de Rômulo Augusto em favor do chefe militar Odoacro, esse evento marcou o fim do Império Romano do Ocidente. Entre seus principais fatores estão disputas internas, invasões de povos 'bárbaros', divisão entre as partes Ocidental e Oriental, crises econômicas e a crescente influência do cristianismo. Roma foi saqueada por Alarico em 410 e posteriormente invadida por vândalos (455) e ostrogodos (546). Fonte: Toda Matéria."
   },
   {
     // Evento: Surgimento das Universidades
@@ -22,26 +22,26 @@ const DATA = [
     ano: "séculos XII–XIII",
     periodo: "Idade Média",
     imagem: "static/img/surgimentodasuniversidades.jpg",
-    resumo: "Centros de saber em cidades como Bolonha, Paris e Oxford.",
-    texto: "As universidades medievais consolidaram o trivium e quadrivium, ampliando o estudo do direito, medicina e teologia. Tornaram-se pilares na transmissão do conhecimento e na formação de corporações intelectuais."
+    resumo: "Primeiras universidades medievais surgem como corporações de professores e alunos, além do domínio clerical.",
+    texto: "A partir do século XII, impulsionado pelo renascimento urbano e comercial, surgiram as primeiras universidades medievais em cidades como Bolonha, Paris e Oxford. Diferentemente dos mosteiros, essas instituições eram corporações de professores e alunos (universitas), financiadas muitas vezes por burgueses. O currículo incluía o trivium (gramática, retórica e lógica) e o quadrivium (aritmética, geometria, astronomia e música). Esse movimento representou um avanço intelectual além do domínio clerical. Fonte: Brasil Escola."
   },
   {
     id: "revolucao-francesa",
     titulo: "Revolução Francesa",
     ano: "1789",
     periodo: "Era Moderna",
-  imagem: "static/img/revoluçãofrancesa.jfif",
-    resumo: "Mudança política e social com ideais iluministas.",
-    texto: "Iniciada em 1789, a Revolução aboliu privilégios feudais, proclamou a Declaração dos Direitos do Homem e estabeleceu novas formas de participação política. Seus impactos se estenderam por toda a Europa e Américas."
+    imagem: "static/img/revoluçãofrancesa.jfif",
+    resumo: "Revolução que marcou o fim do Antigo Regime e do absolutismo na França.",
+    texto: "Ocorreu entre 1789 e 1799, marcando o fim do Antigo Regime e do absolutismo na França. O processo envolveu a burguesia e a população, resultando na Declaração dos Direitos do Homem e do Cidadão, no estabelecimento da república e na instauração do calendário revolucionário que aboliu referências religiosas. A revolução atravessou três fases: Assembleia Constituinte, Convenção (com o período do Terror) e Diretório, seguindo até a ascensão de Napoleão Bonaparte. A Batalha de Valmy (20 de setembro de 1792) simbolizou o fim da monarquia absolutista e o início da república. Fonte: Brasil Escola."
   },
   {
     id: "revolucao-industrial",
     titulo: "Revolução Industrial",
     ano: "séculos XVIII–XIX",
     periodo: "Era Moderna",
-  imagem: "static/img/revolucaoindustrial.webp",
-    resumo: "Mecanização, fábricas e urbanização acelerada.",
-    texto: "A Revolução Industrial transformou a produção têxtil, o transporte e a energia, com a máquina a vapor e, mais tarde, eletricidade. Mudou padrões de trabalho e estimulou novas classes sociais e movimentos trabalhistas."
+    imagem: "static/img/revolucaoindustrial.webp",
+    resumo: "Transição da manufatura para a maquinofatura, surgimento do modelo fabril e capitalismo financeiro.",
+    texto: "Esse processo marcou a transição da manufatura para a maquinofatura, com trabalhadores substituídos por máquinas. Surgiu o modelo fabril que alienava o trabalhador, que passou a ter funções repetitivas e pouco senso do valor do trabalho produzido. Nasce o capitalismo financeiro, a produção em massa, a urbanização e o imperialismo como forças motrizes, levando ao excedente produtivo e à necessidade de novos mercados. No Brasil, as condições trabalhistas no início da revolução eram precárias: jornadas de até 15 horas, sem descanso nem direitos garantidos, o que impulsionou o surgimento de movimentos operários e sindicatos. Fonte: Monografias Brasil Escola."
   },
   {
     id: "primeira-guerra",
@@ -49,8 +49,8 @@ const DATA = [
     ano: "1914–1918",
     periodo: "Século XX",
     imagem: "static/img/primeiraguerramundial.jpg",
-    resumo: "Conflito global desencadeado por alianças e nacionalismos.",
-    texto: "A guerra de trincheiras e novas tecnologias bélicas redefiniram estratégias militares. O Tratado de Versalhes redesenhou fronteiras e impôs condições à Alemanha, com efeitos profundos nas décadas seguintes."
+    resumo: "Conflito entre 1914–1918, marcado por nacionalismo, alianças e guerra de trincheiras.",
+    texto: "Travada entre 1914–1918, teve causas como nacionalismo, rivalidades imperialistas e sistema de alianças. O estopim foi o assassinato do arquiduque Francisco Ferdinando, em Sarajevo, em 28 de junho de 1914. A guerra foi caracterizada principalmente pela guerra de trincheiras e o uso de armas modernas como aviões, tanques e gases tóxicos. As baixas foram imensas; só os militares contabilizaram milhões de mortos, feridos e incapacitados. O conflito levou ao colapso de impérios e à assinatura do Tratado de Versalhes, cujas cláusulas severas contribuíram para o surgimento do nazismo e da Segunda Guerra Mundial. Fonte: Brasil Escola."
   },
   {
     id: "segunda-guerra",
@@ -76,8 +76,8 @@ const DATA = [
     ano: "década de 1990",
     periodo: "Atualidade",
     imagem: "static/img/internet.webp",
-    resumo: "Expansão global da rede e transformação digital.",
-    texto: "A popularização da Internet mudou comunicação, educação e comércio. Protocolos como HTTP e a web tornaram-se centrais no cotidiano, impulsionando a economia digital e novas culturas online."
+    resumo: "Internet se torna principal meio de comunicação global, com bilhões de usuários.",
+    texto: "A internet teve origem na Arpanet, criada na década de 1960 para fins militares e de pesquisa nos EUA. No Brasil, a rede chegou em 1988 via conexão entre a UFRJ e a Universidade de Maryland. A partir de 1994, com acesso comercial aberto, a internet se tornou o principal meio de comunicação global, com bilhões de usuários. Fonte: Brasil Escola."
   },
   {
     id: "primavera-arabe",
@@ -85,8 +85,8 @@ const DATA = [
     ano: "2010–2012",
     periodo: "Atualidade",
     imagem: "static/img/primaveraarabe.avif",
-    resumo: "Série de protestos e mudanças políticas no Norte da África e Oriente Médio.",
-    texto: "Movimentos por reformas políticas e direitos civis tiveram desdobramentos diversos nos países envolvidos, com transições, conflitos e reavaliações de políticas regionais e internacionais."
+    resumo: "Movimentos de protesto iniciados em 2010, com graves consequências e milhares de vítimas.",
+    texto: "Movimentos de protesto iniciados em 2010 em vários países árabes, resultando em graves consequências como repressão violenta, milhares de mortos e refugiados. No Egito, houve centenas de vítimas; na Líbia, mais de 5 mil; e na Síria, a guerra civil deixou centenas de milhares de vítimas entre 2011 e 2021. Fonte: Brasil Escola."
   }
 ];
 
